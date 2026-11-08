@@ -1,4 +1,4 @@
-/* KOPA CrossFit — minimal site JS. No deps. */
+/* CrossFit Jefferson site JS. No deps. */
 (() => {
   'use strict';
 
