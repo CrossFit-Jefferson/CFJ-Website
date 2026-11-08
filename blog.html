@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Blog · CrossFit Jefferson</title>
+  <meta name="description" content="Training tips, nutrition habits, and member stories from CrossFit Jefferson in Jefferson, GA.">
+  <meta name="theme-color" content="#01152d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css?v=21">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://kopacrossfit.com/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://kopacrossfit.com/blog"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "name":"CrossFit Jefferson Blog",
+    "url":"https://kopacrossfit.com/blog",
+    "publisher":{"@type":"HealthClub","name":"CrossFit Jefferson","url":"https://kopacrossfit.com"}
+  }
+  </script>
+  <style>
+    .post-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--t-med), box-shadow var(--t-med);
+    }
+    .post-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .post-cover {
+      aspect-ratio: 16 / 10;
+      background: linear-gradient(135deg, var(--ink) 0%, var(--brand) 100%);
+      display: grid; place-items: center;
+      color: rgba(255,255,255,0.4);
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      letter-spacing: 0.04em;
+    }
+    .post-cover.alt-1 { background: linear-gradient(135deg, #5a3ec8 0%, var(--ink) 100%); }
+    .post-cover.alt-2 { background: linear-gradient(135deg, #1f6b30 0%, var(--ink) 100%); }
+    .post-cover.alt-3 { background: linear-gradient(135deg, #c0392b 0%, var(--ink) 100%); }
+    .post-cover.alt-4 { background: linear-gradient(135deg, #b88600 0%, var(--ink) 100%); }
+    .post-cover.alt-5 { background: linear-gradient(135deg, #2a6df0 0%, var(--ink) 100%); }
+    .post-body { padding: var(--s-5); flex: 1; display: flex; flex-direction: column; }
+    .post-meta { display: flex; gap: var(--s-3); align-items: center; font-size: 0.78rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; margin-bottom: var(--s-3); }
+    .post-meta .pill { background: var(--brand-50); color: var(--brand-700); padding: 0.2rem 0.6rem; border-radius: 999px; }
+    .post-body h3 { font-family: var(--font-body); font-size: 1.3rem; line-height: 1.3; text-transform: none; letter-spacing: 0; margin-bottom: var(--s-3); }
+    .post-body p { color: var(--muted); flex: 1; }
+    .post-link { color: var(--brand); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; margin-top: var(--s-4); display: inline-flex; gap: var(--s-2); align-items: center; }
+    .post-link::after { content: "→"; transition: transform var(--t-fast); }
+    .post-card:hover .post-link::after { transform: translateX(4px); }
+
+    .featured-post {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      background: var(--ink);
+      color: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      gap: 0;
+    }
+    .featured-post .cover {
+      background: linear-gradient(135deg, var(--brand) 0%, var(--ink) 100%);
+      min-height: 320px;
+      display: grid; place-items: center;
+      color: rgba(255,255,255,0.5);
+      font-family: var(--font-display);
+      font-size: 3rem;
+    }
+    .featured-post .body { padding: clamp(1.5rem, 4vw, 3rem); display: flex; flex-direction: column; justify-content: center; }
+    .featured-post h2 { color: white; font-size: clamp(1.6rem, 3vw, 2.4rem); font-family: var(--font-body); text-transform: none; letter-spacing: -0.01em; line-height: 1.2; }
+    .featured-post p { color: rgba(255,255,255,0.78); margin-top: var(--s-4); }
+
+    @media (max-width: 880px) {
+      .featured-post { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html" aria-label="CrossFit Jefferson home"><img src="assets/img/cfj-logo.png" alt="CrossFit Jefferson" width="170" height="93"></a>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="get-started.html" class="btn btn-primary">Free Intro</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Blog</div>
+    <h1 class="h-display">The CFJ blog.</h1>
+    <p class="lead" style="max-width: 60ch; margin-top: var(--s-4);">Training tips, nutrition habits, and stories from members and coaches in Jefferson.</p>
+  </div>
+</section>
+
+<!-- Featured -->
+<section>
+  <div class="container">
+    <article class="featured-post reveal">
+      <div class="cover">FEATURED</div>
+      <div class="body">
+        <div class="post-meta" style="color: rgba(255,255,255,0.5);">
+          <span class="pill" style="background: rgba(215,14,28,0.18); color: var(--brand-300);">Getting Started</span>
+          <span>6 min read</span>
+        </div>
+        <h2>What to expect in your first 30 days at CFJ</h2>
+        <p>The first month is where most of the magic happens. Here's exactly what new members experience, week by week — what to expect, what'll surprise you, and how fast results actually come.</p>
+        <a href="#" class="post-link" style="color: var(--brand-300); margin-top: var(--s-5);">Read article</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Recent posts grid -->
+<section class="bg-paper-2">
+  <div class="container">
+    <div class="flex flex-between flex-wrap" style="margin-bottom: var(--s-6); gap: var(--s-4);">
+      <div>
+        <span class="eyebrow">Latest</span>
+        <h2 style="font-family: var(--font-body); text-transform: none; letter-spacing: -0.01em; font-size: clamp(1.6rem, 3vw, 2.2rem);">Recent posts</h2>
+      </div>
+      <div class="flex" style="gap: var(--s-2);">
+        <a href="#" class="btn btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.8rem;">All</a>
+        <a href="#" class="btn btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Training</a>
+        <a href="#" class="btn btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Nutrition</a>
+        <a href="#" class="btn btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Stories</a>
+      </div>
+    </div>
+
+    <div class="grid grid-3">
+      <a href="#" class="post-card reveal">
+        <div class="post-cover alt-1">Hyrox</div>
+        <div class="post-body">
+          <div class="post-meta"><span class="pill">Training</span><span>4 min</span></div>
+          <h3>How to pace your first Hyrox: a coach's guide</h3>
+          <p>The single biggest mistake newcomers make is going out too hot. Here's how to think about each station and your overall race day strategy.</p>
+          <span class="post-link">Read more</span>
+        </div>
+      </a>
+      <a href="#" class="post-card reveal">
+        <div class="post-cover alt-2">Habits</div>
+        <div class="post-body">
+          <div class="post-meta"><span class="pill">Nutrition</span><span>5 min</span></div>
+          <h3>3 nutrition habits that beat any meal plan</h3>
+          <p>Forget perfect macros. These three habits, done consistently, will outperform almost any restrictive diet for everyday humans.</p>
+          <span class="post-link">Read more</span>
+        </div>
+      </a>
+      <a href="#" class="post-card reveal">
+        <div class="post-cover alt-3">Story</div>
+        <div class="post-body">
+          <div class="post-meta"><span class="pill">Member story</span><span>3 min</span></div>
+          <h3>From "couldn't run a mile" to first 5K — Megan's year</h3>
+          <p>What changes in a year of consistent CrossFit? Megan walks through her starting point, the wins, the setbacks, and what she'd tell her past self.</p>
+          <span class="post-link">Read more</span>
+        </div>
+      </a>
+      <a href="#" class="post-card reveal">
+        <div class="post-cover alt-4">Lifting</div>
+        <div class="post-body">
+          <div class="post-meta"><span class="pill">Training</span><span>6 min</span></div>
+          <h3>The snatch — broken down for beginners</h3>
+          <p>Every cue, every common error, and the drills that fix the snatch faster than any YouTube video. Bookmark for class.</p>
+          <span class="post-link">Read more</span>
+        </div>
+      </a>
+      <a href="#" class="post-card reveal">
+        <div class="post-cover alt-5">Recovery</div>
+        <div class="post-body">
+          <div class="post-meta"><span class="pill">Recovery</span><span>4 min</span></div>
+          <h3>Sleep is the cheat code: training, simply explained</h3>
+          <p>If you only optimize one thing this month, make it sleep. Here's why, and what to actually change.</p>
+          <span class="post-link">Read more</span>
+        </div>
+      </a>
+      <a href="#" class="post-card reveal">
+        <div class="post-cover">Programming</div>
+        <div class="post-body">
+          <div class="post-meta"><span class="pill">Inside CFJ</span><span>3 min</span></div>
+          <h3>Why we program the way we program</h3>
+          <p>A peek behind the curtain at how each week's classes are designed, and why we never repeat the same workout twice.</p>
+          <span class="post-link">Read more</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="text-center small mt-8 muted"><em>Posts above are placeholders — write a post in the <code>site/</code> folder anytime and we'll wire it in. The grid auto-flows.</em></p>
+  </div>
+</section>
+
+<!-- Newsletter / CTA -->
+<section>
+  <div class="container">
+    <div class="cta-banner reveal">
+      <span class="eyebrow" style="color: var(--brand-300);">Stay in the loop</span>
+      <h2>One short email a week.<br>No fluff.</h2>
+      <p class="lead">Member tips, programming news, and the occasional event invite. Unsubscribe anytime.</p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; gap: var(--s-3); max-width: 460px; margin: var(--s-4) auto 0; flex-wrap: wrap;">
+        <input type="email" name="email" placeholder="you@example.com" required style="flex: 1; min-width: 220px; padding: 0.95rem 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; color: white; font-size: 1rem;">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="nav-brand" href="index.html" aria-label="CrossFit Jefferson home"><img src="assets/img/cfj-logo-white.png" alt="CrossFit Jefferson" style="height:84px;width:auto;"></a>
+        <p class="footer-brand-text">Where strength meets community in Jefferson, GA.</p>
+      </div>
+      <div><h4>Train</h4><ul><li><a href="programs.html">Programs</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="get-started.html">Free Intro</a></li></ul></div>
+      <div><h4>Gym</h4><ul><li><a href="coaches.html">Coaches</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li>143 Hill Street</li><li>Jefferson, GA 30549</li><li><a href="contact.html">Hours &amp; directions →</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> CrossFit Jefferson. All rights reserved.</span>
+      <span>Built strong in Jefferson, GA.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="get-started.html" class="btn btn-primary float-cta">Free Intro</a>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

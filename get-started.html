@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Free Intro · CrossFit Jefferson</title>
+  <meta name="description" content="Book your free intro at CrossFit Jefferson in Jefferson, GA. 30 minutes with a coach to map your starting point.">
+  <meta name="theme-color" content="#01152d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css?v=21">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://kopacrossfit.com/"},
+      {"@type":"ListItem","position":2,"name":"Free Intro","item":"https://kopacrossfit.com/get-started"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html" aria-label="CrossFit Jefferson home"><img src="assets/img/cfj-logo.png" alt="CrossFit Jefferson" width="170" height="93"></a>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="get-started.html" class="btn btn-primary">Free Intro</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Free Intro</div>
+    <h1 class="h-display">Book your<br>free intro.</h1>
+    <p class="lead" style="max-width: 60ch; margin-top: var(--s-4);">A no-pressure, 30-minute chat with a coach. Tour the gym, talk goals, leave with a plan — even if CFJ isn't the right fit.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid" style="grid-template-columns: 1fr 1.2fr; gap: var(--s-8); align-items: start;">
+
+      <!-- What to expect -->
+      <aside class="reveal" style="position: sticky; top: 100px;">
+        <span class="eyebrow">What to expect</span>
+        <h2>30 minutes.<br>Zero pressure.</h2>
+        <span class="divider"></span>
+        <p>Your free intro is a real conversation, not a sales pitch. Here's what we'll cover:</p>
+
+        <ul class="checks mt-6">
+          <li><strong>Goals chat</strong> — what you want, what's worked, what hasn't</li>
+          <li><strong>Movement screen</strong> — quick check of how your body moves today</li>
+          <li><strong>Gym tour</strong> — see the space, meet whoever's around</li>
+          <li><strong>Game plan</strong> — the right starting point for you, even if that's not us</li>
+          <li><strong>No obligation</strong> — leave whenever you want</li>
+        </ul>
+
+        <div class="card mt-8" style="background: var(--paper-2); border-color: transparent;">
+          <h4 style="font-family: var(--font-body); text-transform: none; letter-spacing: 0; font-size: 1rem; margin-bottom: var(--s-2);">Prefer to call?</h4>
+          <p class="muted" style="margin-bottom: var(--s-3);">Reach the gym directly — we usually pick up.</p>
+          <a href="contact.html" class="card-link">Find phone &amp; address →</a>
+        </div>
+      </aside>
+
+      <!-- Form -->
+      <div>
+        <div class="form-card reveal">
+          <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem);">Tell us a bit about you.</h2>
+          <p class="muted mb-6">We'll text you back within a business day to schedule your free intro.</p>
+
+          <!--
+            ⚠️ FORM SETUP:
+            Replace `action` below with your form handler:
+              - Formspree:   https://formspree.io/f/YOUR_FORM_ID
+              - Netlify:     add `data-netlify="true"` and `name="free-intro"` to <form>
+              - Custom:      any HTTPS endpoint that accepts POST
+            Currently the form is wired to Formspree-style — replace the URL.
+          -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="freeIntroForm" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="firstName">First name <span class="req">*</span></label>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+              </div>
+              <div class="field">
+                <label for="lastName">Last name <span class="req">*</span></label>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="phone">Phone <span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="goal">What's your #1 goal? <span class="req">*</span></label>
+              <select id="goal" name="goal" required>
+                <option value="">Pick one…</option>
+                <option>Lose weight / improve body composition</option>
+                <option>Build strength</option>
+                <option>Get back in shape after a break</option>
+                <option>Train for Hyrox / a race</option>
+                <option>General health &amp; longevity</option>
+                <option>Functional Bodybuilding</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="experience">Fitness experience</label>
+              <select id="experience" name="experience">
+                <option value="">Optional…</option>
+                <option>New to fitness</option>
+                <option>Been a long time since I've trained</option>
+                <option>Train regularly, new to CrossFit</option>
+                <option>Experienced CrossFitter</option>
+                <option>Athlete / competitor</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="timing">When do you want to start?</label>
+              <select id="timing" name="timing">
+                <option value="">Optional…</option>
+                <option>This week</option>
+                <option>Within 2 weeks</option>
+                <option>Within a month</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="notes">Anything else?</label>
+              <textarea id="notes" name="notes" placeholder="Injuries, scheduling notes, questions for the coach…"></textarea>
+            </div>
+
+            <label class="checkbox">
+              <input type="checkbox" name="contactConsent" required>
+              <span>I'm OK with CrossFit Jefferson reaching out by text, email, or phone to schedule my free intro.</span>
+            </label>
+
+            <!-- Honeypot (anti-spam, leave hidden) -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+            <button type="submit" class="btn btn-primary btn-lg btn-arrow full-width" style="justify-content: center;">Send My Request</button>
+            <p class="small text-center mt-4">We respect your time. No spam, no sales calls — just a coach reaching out to set up your visit.</p>
+          </form>
+
+          <!-- Success message (hidden until JS shows it) -->
+          <div id="freeIntroSuccess" hidden style="background: var(--paper-2); border-radius: var(--radius); padding: var(--s-5); text-align: center; margin-top: var(--s-4);">
+            <h3 style="color: var(--brand);">Got it!</h3>
+            <p class="muted">A coach will text you within a business day to lock in a time. Check your phone — and your spam folder, just in case.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="bg-paper-2 section-tight">
+  <div class="container">
+    <div class="grid grid-3 text-center">
+      <div class="reveal">
+        <h3 style="color: var(--brand);">5.0★</h3>
+        <p class="muted">Google rating across hundreds of reviews</p>
+      </div>
+      <div class="reveal">
+        <h3 style="color: var(--brand);">1,000+</h3>
+        <p class="muted">Members trained at CFJ</p>
+      </div>
+      <div class="reveal">
+        <h3 style="color: var(--brand);">$0</h3>
+        <p class="muted">Cost of your first visit</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="nav-brand" href="index.html" aria-label="CrossFit Jefferson home"><img src="assets/img/cfj-logo-white.png" alt="CrossFit Jefferson" style="height:84px;width:auto;"></a>
+        <p class="footer-brand-text">Where strength meets community in Jefferson, GA.</p>
+      </div>
+      <div><h4>Train</h4><ul><li><a href="programs.html">Programs</a></li><li><a href="schedule.html">Schedule</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="get-started.html">Free Intro</a></li></ul></div>
+      <div><h4>Gym</h4><ul><li><a href="coaches.html">Coaches</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li>143 Hill Street</li><li>Jefferson, GA 30549</li><li><a href="contact.html">Hours &amp; directions →</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> CrossFit Jefferson. All rights reserved.</span>
+      <span>Built strong in Jefferson, GA.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script>
+  // Lightweight client-side: show success message if Formspree returns OK via fetch.
+  const form = document.getElementById('freeIntroForm');
+  const successEl = document.getElementById('freeIntroSuccess');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      // If endpoint hasn't been configured yet, fall through to default browser behavior.
+      const action = form.getAttribute('action') || '';
+      if (action.includes('YOUR_FORM_ID')) return;
+      e.preventDefault();
+      const fd = new FormData(form);
+      try {
+        const res = await fetch(action, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' }});
+        if (res.ok) {
+          form.hidden = true;
+          successEl.hidden = false;
+          successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          alert('Something went wrong. Please try again or call the gym directly.');
+        }
+      } catch (err) {
+        alert('Network error. Please try again.');
+      }
+    });
+  }
+</script>
+
+<style>
+  @media (max-width: 980px) {
+    section .grid[style*="grid-template-columns: 1fr 1.2fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    section aside[style*="position: sticky"] { position: static !important; }
+  }
+</style>
+</body>
+</html>

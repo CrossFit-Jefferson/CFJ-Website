@@ -1,0 +1,17 @@
+# Only publish the images the site actually uses.
+# The rest of assets/img is the full gym photo library (member photos) — keep it local.
+assets/img/*
+!assets/img/cfj-logo.png
+!assets/img/cfj-logo-white.png
+!assets/img/favicon.png
+!assets/img/hero.webp
+!assets/img/crossfit.jpg
+!assets/img/hyrox.jpg
+!assets/img/strengthhouse.jpg
+
+# Brand source files (logo zips, merch mockups)
+assets/brand/
+
+# Print materials, not part of the website
+flyer.html
+CFJ-flyer.pdf
